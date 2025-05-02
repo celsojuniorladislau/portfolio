@@ -6,7 +6,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { useEffect } from "react"
 
-export default function Component() {
+type ComponentProps = {
+  latestVersion: string
+}
+export default function Component({ latestVersion }: ComponentProps) {
   // Função para lidar com a rolagem suave para as âncoras
   useEffect(() => {
     // Função para rolar suavemente para a seção
@@ -216,7 +219,7 @@ export default function Component() {
                     Ver no GitHub
                   </a>
                   <span className="text-xs text-gray-300 bg-white/10 px-2 py-1 rounded-md inline-flex items-center">
-                    v1.0.32
+                   {latestVersion}
                   </span>
                 </div>
               </div>
@@ -261,7 +264,7 @@ export default function Component() {
               </div>
               <div className="md:col-span-3 text-white">
                 <p className="mb-4 text-lg">
-                  Sou um desenvolvedor especializado em criar soluções tecnológicas que transformam negócios. Com
+                  Desenvolvedor especializado em criar soluções tecnológicas que transformam negócios. Com
                   experiência em desenvolvimento de sistemas, automação e inteligência artificial, trabalho para tornar
                   processos mais eficientes e melhorar a experiência dos usuários.
                 </p>
